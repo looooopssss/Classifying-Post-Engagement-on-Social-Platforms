@@ -11,78 +11,57 @@ Marketing teams often struggle to predict which types of content will drive the 
 
 Tools & Technologies
 Python (Pandas, NumPy, Seaborn, Matplotlib)
-
 Scikit-learn for modeling and evaluation
-
 XGBoost / Random Forest (optional)
-
 Jupyter Notebook for analysis
-
 Git/GitHub for version control and collaboration
 
 Exploratory Data Analysis (EDA)
 The EDA revealed:
 
 Engagement metrics (likes, comments, shares) are distributed differently across content types.
-
 Comments appear to be a stronger signal of overall engagement than views or shares alone.
-
 Categorical features like Platform, Content_Type, and Region show diverse performance patterns, suggesting that no single feature fully explains engagement levels.
-
 These findings support the need for a multivariate classification model and motivate the creation of new engineered features.
 
 Feature Engineering
 To improve model performance, we apply several preprocessing steps:
 
 One-hot encoding for categorical features (Platform, Region, Content_Type, Hashtag)
-
 New features like:
 
 likes_per_view
-
 comments_per_view
-
 shares_per_view
-
 total_interactions (sum of likes, shares, comments)
 
 Scaling of numeric values to handle feature range differences
-
 Balancing classes if needed using techniques like SMOTE or class weighting
 
-🤖 Modeling Approach
+Modeling Approach
 We train and evaluate multiple classification models, including:
 
 Logistic Regression
-
 Random Forest
-
 XGBoost (if applicable)
 
 Models are evaluated using:
 
 Accuracy
-
 F1 Score (macro/micro)
-
 Confusion Matrix
-
 Feature Importance Analysis
 
 Success Criteria
 A successful model will:
 
 Achieve strong F1 scores across all three engagement levels (not just the majority class)
-
 Highlight meaningful feature relationships
-
 Offer actionable insights for content and marketing teams to improve engagement
 
 Key Takeaways
 Predicting engagement levels is possible using a combination of metadata and engagement metrics.
-
 Engineered features like interaction rates significantly improve model understanding.
-
 Insights from this project could help companies optimize posting strategies and content types by platform and region.
 
 Project Structure
@@ -99,9 +78,7 @@ Project Structure
 
 Next Steps
 Tune model hyperparameters for optimal performance
-
 Explore time-based features (if timestamps are available)
-
 Deploy as a simple web tool or dashboard for content teams
 
 🙋‍♀️ Author
